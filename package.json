@@ -1,19 +1,40 @@
 {
   "name": "tab-code-complete",
+  "displayName": "Tab Code Complete",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "build": "tsc",
-    "dev": "tsx watch src/index.ts",
-    "start": "tsx src/index.ts"
+  "description": "A VS Code extension scaffold for Tab-driven code completion.",
+  "engines": {
+    "vscode": "^1.100.0"
   },
-  "keywords": [],
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:tabCodeComplete.hello"
+  ],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "tabCodeComplete.hello",
+        "title": "Tab Code Complete: Hello"
+      }
+    ]
+  },
+  "scripts": {
+    "build": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "keywords": [
+    "vscode-extension",
+    "completion",
+    "tab"
+  ],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@types/node": "^25.3.5",
-    "tsx": "^4.21.0",
+    "@types/vscode": "^1.100.0",
     "typescript": "^5.9.3"
   }
 }
