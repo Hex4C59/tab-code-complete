@@ -25,7 +25,9 @@ coverage/
 !.env.example
 
 # editor settings
-.vscode/
+.vscode/*
+!.vscode/launch.json
+!.vscode/tasks.json
 
 # OS files
 .DS_Store

@@ -9,9 +9,6 @@
   "categories": [
     "Other"
   ],
-  "activationEvents": [
-    "onCommand:tabCodeComplete.hello"
-  ],
   "main": "./dist/extension.js",
   "contributes": {
     "commands": [
@@ -23,7 +20,8 @@
   },
   "scripts": {
     "build": "tsc -p ./",
-    "watch": "tsc -watch -p ./"
+    "watch": "tsc -watch -p ./",
+    "check": "tsc --noEmit -p ./"
   },
   "keywords": [
     "vscode-extension",
